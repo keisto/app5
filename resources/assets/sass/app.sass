@@ -1,0 +1,575 @@
+require "bootstrap"
+@import "./node_modules/bulma/sass/utilities/initial-variables"
+@import "./node_modules/bulma/sass/utilities/functions"
+
+//$family-serif: 'Open Sans', sans-serif
+//$family-primary: $family-serif
+//    Backgrounds: #F1F3F6
+//    Footer: #F7F9FA
+//    Border: #EAEAEA
+
+//    Colors:
+//    Success: #7EC74D
+//    Primary: #38495C
+//    Purple: #925FB1
+//    Info: #4F98D5
+//    Warning: #F5B841
+//    Orange: #D9823B
+//    Danger: #D75745
+//    Deep Red: #B24334
+
+$background: #F8F9FD
+
+$primary: #4EF5B1
+$success: #4EF5B1
+$info: #69B8FD
+$link: #394165
+$danger: #fe7a87
+$warning: #FFCC66
+$warning-invert: white
+$tooltip-background-color: #202433
+// Custom Colors
+$purple: #9661E2
+$offwhite: #ACB3C6
+
+
+@import "./node_modules/bulma//sass/utilities/derived-variables.sass"
+$addColors: ("purple":($purple, white), "offwhite":($offwhite, $link))
+$colors: map-merge($colors, $addColors)
+
+@import "./node_modules/bulma/bulma"
+@import "./node_modules/bulma-extensions/extensions"
+@import './node_modules/bulma-checkradio/checkradio'
+
+.subtitle
+  color: $offwhite
+
+.title
+  color: $link
+
+//    Backgrounds: #F1F3F6
+//    Footer: #F7F9FA
+//    Border: #EAEAEA
+//
+//    Colors:
+//    Success: #7EC74D
+//    Primary: #38495C
+//    Purple: #925FB1
+//    Info: #4F98D5
+//    Warning: #F5B841
+//    Orange: #D9823B
+//    Danger: #D75745
+//    Deep Red: #B24334
+.border-primary
+  border-left: 4px solid $primary
+.border-warning
+  border-left: 4px solid $warning
+.border-info
+  border-left: 4px solid $info
+.border-success
+  border-left: 4px solid $success
+.border-danger
+  border-left: 4px solid $danger
+.border-purple
+  border-left: 4px solid $purple
+
+.section
+  transition: 2s
+
+.container
+  height: auto
+  transition: 2s
+  //-webkit-animation-duration: 2s
+  //-webkit-animation-delay: 1s
+  //-webkit-animation-iteration-count: infinite
+
+.columns
+  -webkit-animation-duration: 2s
+  //-webkit-animation-delay: 1s
+  //-webkit-animation-iteration-count: infinite
+
+
+.button
+  padding-left: 1.5rem
+  padding-right: 1.5rem
+  height: 3.25em
+  border-color: $link
+.field.has-addons .control .button:hover
+  margin-top: -6px
+  margin-bottom: -6px
+  border-radius: 3px !important
+  height: 4rem
+// Button Glow
+.button.is-primary
+  transition: 500ms
+.button.is-primary:hover
+  box-shadow: 0 5px 25px $primary
+
+.button.is-warning
+  transition: 500ms
+.button.is-warning:hover
+  box-shadow: 0 5px 25px $warning
+
+.button.is-info
+  transition: 500ms
+.button.is-info:hover
+  box-shadow: 0 5px 25px $info
+
+.button.is-success
+  transition: 500ms
+.button.is-success:hover
+  box-shadow: 0 5px 25px $success
+
+.button.is-danger
+  transition: 500ms
+.button.is-danger:hover
+  box-shadow: 0 5px 25px $danger
+
+.button.is-purple
+  transition: 500ms
+.button.is-purple:hover
+  box-shadow: 0 5px 25px $purple
+
+.button.is-link
+  transition: 500ms
+.button.is-link:hover
+  box-shadow: 0 5px 25px $link
+
+.button.is-outlined
+  transition: 500ms
+
+.button.is-outlined:hover
+  border-color: $link
+  box-shadow: 0 5px 25px $offwhite
+
+.button.is-light
+  transition: 500ms
+  border-color: $offwhite
+  background-color: $background
+
+.button.is-light:hover
+  border-color: $offwhite
+  background-color: $background
+  box-shadow: 0 5px 25px $offwhite
+
+.is-inlined
+  display: inline-block
+
+div .select
+  width: 100%
+
+.label
+  //text-transform: uppercase
+  font-weight: normal
+  color: $offwhite
+
+.input
+  height: 3.25rem
+  background: $background
+  border: 1px solid $offwhite
+  box-shadow: none
+  -webkit-box-shadow: none
+
+.input:active,.input:focus
+  background: white
+
+.input::placeholder
+  color: $offwhite
+.selectize-dropdown [data-selectable],
+.selectize-dropdown .optgroup-header
+  padding: 12px 8px
+
+.selectize-dropdown
+
+
+.selectize-input
+  padding: 15px 8px
+.selectize-input.full
+  background-color: $background
+.selectize-input.full.input-active.focus,
+.selectize-input.full.input-active.focus
+  background-color: white
+  border-color: #394165
+  -webkit-box-shadow: 0 0 0 0.125em rgba(57, 65, 101, 0.25)
+  box-shadow: 0 0 0 0.125em rgba(57, 65, 101, 0.25)
+
+.selectize-dropdown-content .option:hover,
+.selectize-dropdown-content .option:active,
+.selectize-dropdown-content .option:focus
+  background-color: $link
+  color: white
+
+.selectize-dropdown
+  border-color: #394165
+  -webkit-box-shadow: 0 0 0 0.125em rgba(57, 65, 101, 0.25)
+  box-shadow: 0 0 0 0.125em rgba(57, 65, 101, 0.25)
+.selectize-dropdown .active
+  background-color: $link
+  color: white
+
+.selectize-input
+  height: 3.25rem
+  font-size: 1rem
+  background-color: $background
+  border: 1px solid $offwhite
+  box-shadow: none
+  -webkit-box-shadow: none
+
+.selectize-input::placeholder
+  color: $offwhite
+
+
+//.column-actions
+//  display: none
+//  margin-top: 20px
+//  margin-bottom: 20px
+
+.no-pad-top-bottom
+  padding-top: 0
+  padding-bottom: 0
+.box.is-box-small
+  padding: 0.25rem
+.box:first-of-type
+  margin-top: 1.5rem
+.box
+  margin-top: -0.5rem
+  position: relative
+  background-color: white
+  border-radius: 3px
+  transition: 1.5s
+  padding: 1rem
+  -webkit-box-shadow: 0 5px 25px rgba(10, 10, 10, 0)
+  box-shadow: 0 5px 25px rgba(10, 10, 10, 0)
+.input.is-small
+  height: 2rem
+select.is-small
+  height: 2rem
+.is-small .selectize-input
+  height: 2rem
+  padding: 6px 8px
+.dropdown-content
+  background-color: white
+  border-radius: 3px
+  -webkit-box-shadow: 0 5px 25px rgba(10, 10, 10, 0.10)
+  box-shadow: 0 5px 25px rgba(10, 10, 10, 0.10)
+
+#items .box:hover
+  -webkit-box-shadow: 0 5px 25px rgba(10, 10, 10, 0.10)
+  box-shadow: 0 5px 25px rgba(10, 10, 10, 0.10)
+  position: initial
+
+#charges .box:hover
+  -webkit-box-shadow: 0 5px 25px rgba(10, 10, 10, 0.10)
+  box-shadow: 0 5px 25px rgba(10, 10, 10, 0.10)
+  position: initial
+
+.box:hover
+  -webkit-box-shadow: 0 5px 25px rgba(10, 10, 10, 0.10)
+  box-shadow: 0 5px 25px rgba(10, 10, 10, 0.10)
+  position: relative
+  z-index: 5
+
+.has-shadow
+  -webkit-box-shadow: 0 5px 25px rgba(10, 10, 10, 0.10)
+  box-shadow: 0 5px 25px rgba(10, 10, 10, 0.10)
+
+//.columns.theme-light:hover
+//  background: linear-gradient(white, #f5f7f9) !important
+//  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07) !important
+//  border-radius: 5px !important
+//  border-color: #d3d6db !important
+
+
+//
+//.columns.theme-light
+//  border: 1px solid transparent
+//  border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+//  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1)
+//
+//.columns-last
+//  border: 1px solid transparent
+//  border-bottom: 1px solid rgba(0, 0, 0, 0.0) !important
+//  box-shadow: none
+//  margin-bottom: -10px !important
+
+.notify
+  background-color: rgba(57, 65, 101, 0.8) !important
+  right: 24px !important
+  top: 25px !important
+  position: fixed !important
+  z-index: 90 !important
+
+//#app
+//  margin-left: 0px
+//  width: 100%
+//  overflow-x: hidden
+//  overflow-y: scroll
+//  -webkit-overflow-scrolling: touch
+
+.ui-timepicker-wrapper
+  overflow-y: auto
+  max-height: 150px
+  width: 6.5em
+  background: #fff
+  border: 1px solid #ddd
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+  outline: 0
+  z-index: 10001
+  margin: 0
+  &.ui-timepicker-with-duration
+    width: 13em
+    &.ui-timepicker-step-30, &.ui-timepicker-step-60
+      width: 11em
+
+.ui-timepicker-list
+  margin: 0
+  padding: 0
+  list-style: none
+
+.ui-timepicker-duration
+  margin-left: 5px
+  color: #888
+
+.ui-timepicker-list
+  &:hover .ui-timepicker-duration
+    color: #888
+  li
+    padding: 3px 0 3px 5px
+    cursor: pointer
+    white-space: nowrap
+    color: #000
+    list-style: none
+    margin: 0
+  &:hover .ui-timepicker-selected
+    background: #fff
+    color: #000
+
+li.ui-timepicker-selected
+  background: #1980EC
+  color: #fff
+
+.ui-timepicker-list
+  li:hover, .ui-timepicker-selected:hover
+    background: #1980EC
+    color: #fff
+
+li.ui-timepicker-selected .ui-timepicker-duration
+  color: #ccc
+
+.ui-timepicker-list li
+  &:hover .ui-timepicker-duration
+    color: #ccc
+  &.ui-timepicker-disabled
+    color: #888
+    cursor: default
+    &:hover
+      color: #888
+      cursor: default
+  &.ui-timepicker-selected.ui-timepicker-disabled
+    color: #888
+    cursor: default
+  &.ui-timepicker-disabled:hover, &.ui-timepicker-selected.ui-timepicker-disabled
+    background: #f2f2f2
+
+//.select2-container
+//  width: 100% !important
+//.select2-container .select2-selection--single
+//  height: 3.25rem
+//  background-color: #F8F9FD !important
+//  border: 1px solid #ACB3C6
+//  width: 100%
+//  padding-top: 10px
+//
+//.select2-container:focus .select2-selection--single:focus
+//  border-color: #394165
+//  -webkit-box-shadow: 0 0 0 0.125em rgba(57, 65, 101, 0.25)
+//  box-shadow: 0 0 0 0.125em rgba(57, 65, 101, 0.25)
+
+//select
+//  padding: 2px 10px
+//  border: 1px solid #979997
+//  -webkit-appearance: none
+//  -moz-appearance: none
+//  -ms-appearance: none
+//  -o-appearance: none
+//  appearance: none
+//  -webkit-border-radius: 4px
+//  -moz-border-radius: 4px
+//  -ms-border-radius: 4px
+//  -o-border-radius: 4px
+//  border-radius: 4px
+
+//
+//.navbar
+//  position: fixed
+//  top: 0
+//  left: 0
+//  right: 0
+//  border-bottom: 1px solid $border
+//  z-index: 1000
+body
+  color: $link
+  background-color: $background
+  overflow-y: scroll
+  min-height: 100VH
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  padding-left: 240px
+  bottom: 0
+  padding-top: 44px
+  transition: 0.75s
+
+#app
+  //margin-left: 0
+  //width: 100%
+  //overflow-x: hidden
+  //overflow-y: scroll
+  -webkit-overflow-scrolling: touch
+
+.menu
+  position: fixed
+  min-height: 100VH
+  width: 240px
+  //overflow-y: scroll
+  z-index: 1
+  transition: 0.5s
+  left: 0
+  top: 0
+  bottom: 0
+  border-right: 1px solid $offwhite
+  background: #202433  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, $link, #202433) /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, $link, #202433) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+//202433
+
+
+//.menu-list span:nth-child(2)
+  //font-weight: bold
+  //position: relative
+  //top: -2px
+
+.menu-list a
+  color: white
+  transition: 1s
+  //text-shadow: 0px 1px 3px rgba(0,0,0,.25)
+//
+//.menu-list a .icon
+//  color: white
+
+.menu-list a:hover
+  color: white
+  background-color: rgba(0, 0, 0, 0.25)
+
+.menu-list a:hover .icon
+  color: white
+  text-shadow: 0px 0px 3px #995fff, 0px 0px 3px white
+
+.menu-list li .is-active
+  border-left: 2px solid $success
+  background-color: rgba(0, 0, 0, 0.25)
+  & .icon
+    color: $success
+
+//.menu-list:not(:last-of-type)
+//  border: 1px solid transparent
+//  border-bottom: 1px solid rgba(255, 255, 255, 0.25)
+//  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1)
+
+.menu-list span:nth-child(2).badge[data-badge]::after
+  margin-left: 12px
+
+.icon.is-large
+  height: 4rem
+  width: 4rem
+.box-title
+  border: none
+  background-color: transparent
+  color: $offwhite
+  font-weight: 700
+  padding: 6px 8px
+
+.box-title span:nth-child(2)
+  position: relative
+  top: -2px
+
+.no-margin-ab
+  margin-top: 0
+  margin-bottom: 0
+
+
+.will-be-box:last-of-type
+  top: 0
+  background-color: transparent
+  transition: 1.5s
+  -webkit-box-shadow: 0 5px 25px rgba(10, 10, 10, 0)
+  box-shadow: 0 5px 25px rgba(10, 10, 10, 0)
+
+.will-be-box:not(:last-of-type)
+  top: 0
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+  background-color: transparent
+  transition: 1.5s
+  -webkit-box-shadow: 0 5px 25px rgba(10, 10, 10, 0)
+  box-shadow: 0 5px 25px rgba(10, 10, 10, 0)
+
+.will-be-box:hover
+  top: -3px
+  position: relative
+  background-color: white
+  border-radius: 3px
+  transition: 1.5s
+  //padding: 1rem
+  border-bottom: 1px solid rgba(0, 0, 0, 0.0)
+  -webkit-box-shadow: 0 5px 25px rgba(10, 10, 10, 0.10)
+  box-shadow: 0 5px 25px rgba(10, 10, 10, 0.10)
+
+.column-label
+  padding: 0 0.75rem
+  margin: 0.75rem 0
+.column-label:not(:last-of-type)
+  border-right: 1px solid $offwhite
+//.is-overlay
+//  bottom: 0
+//  left: 0
+//  position: absolute
+//  right: 0
+//  top: 40%
+//  background-color: rgba(255, 255, 255, 0.9)
+//  background: -webkit-linear-gradient(to right, rgba(255, 255, 255, 0.7), white) /* Chrome 10-25, Safari 5.1-6 */
+//  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), white)
+//  width: 1000px
+//  height: auto
+//  z-index: 1
+.tabs a
+  color: $offwhite
+  font-weight: 700
+  border-bottom-color: rgba(0,0,0,0)
+
+.tabs a:hover
+  color: $link
+  font-weight: 700
+  border-bottom: 1px rgba(0,0,0,0) solid
+
+.tabs li.is-active a
+  color: $link
+  border-bottom: 2px rgba(0,0,0,0) solid
+
+.tabs li.is-active
+  color: $link
+  border-bottom: 2px rgba(0,0,0,0) solid
+
+.tabs li.is-active:after
+    content: ""
+    display: block
+    margin: 0 auto
+    width: 60%
+    padding-top: 0
+    border-bottom: 3px $link solid
+
+.tabs ul
+  border-bottom: 2px rgba(0,0,0,0) solid

@@ -1,0 +1,388 @@
+require "bootstrap"
+// 1. Import the initial variables
+@import "./node_modules/bulma/sass/utilities/initial-variables"
+@import "./node_modules/bulma/sass/utilities/functions"
+
+// 2. Set your own initial variables
+// Update blue
+//$blue: #72d0eb
+// Add pink and its invert
+//$pink: #ffb3b3
+//$pink-invert: #fff
+// Add a serif family
+$family-serif: "Merriweather", "Georgia", serif
+
+//    Backgrounds: #F1F3F6
+//    Footer: #F7F9FA
+//    Border: #EAEAEA
+
+//    Colors:
+//    Success: #7EC74D
+//    Primary: #38495C
+//    Purple: #925FB1
+//    Info: #4F98D5
+//    Warning: #F5B841
+//    Orange: #D9823B
+//    Danger: #D75745
+//    Deep Red: #B24334
+
+$background: #F1F3F6
+$footer: #F7F9FA
+$border: #EAEAEA
+
+$primary: #38495C
+$success: #7EC74D
+$info: #4F98D5
+$link: #38495C
+$danger: #D75745
+$warning: #F5B841
+// 4. Setup your Custom Colors
+$purple: #925FB1
+$orange: #D9823B
+$red: #B24334
+//$linkedin-invert: findColorInvert($linkedin)
+//$twitter: #1DA1F2
+//$twitter-invert: findColorInvert($twitter)
+//$github: #222222
+//$github-invert: findColorInvert($github)
+
+// 5. Add new color variables to the color map.
+@import "./node_modules/bulma//sass/utilities/derived-variables.sass"
+$addColors: ("purple":($purple, white), "red":($red, white), "orange":($orange, white))
+$colors: map-merge($colors, $addColors)
+
+// 6. Import the rest of Bulma
+@import "./node_modules/bulma/bulma"
+@import "./node_modules/bulma-extensions/extensions"
+@import './node_modules/bulma-checkradio/checkradio'
+
+//
+//@import "./node_modules/bulma/sass/utilities/initial-variables"
+//
+//// 2. Set your own initial variables
+//// Update blue
+//// $blue: #72d0eb
+//// Add pink and its invert
+//$pink: #71BF44
+//// $pink-invert: #fff
+//// Add a serif family
+//// $family-serif: "Merriweather", "Georgia", serif
+//
+//// 3. Set the derived variables
+//// Use the new pink as the primary color
+//$primary: $pink
+//// $primary-invert: $pink-invert
+//// Use the existing orange as the danger color
+//// $danger: $orange
+//// Use the new serif family
+//// $family-primary: $family-serif
+//
+//// 4. Import the rest of Bulma
+//@import "./node_modules/bulma/bulma"
+//@import "./node_modules/bulma-extensions/extensions"
+//
+
+
+
+//$background-color: rgb(238, 242, 244)
+//
+// #tooltipbox{
+   //     font-size: 14px;
+   //     border: 2px solid blue;
+   //     width: 200px;
+   //     height: 100px;
+   //     background-color: red;
+   //     position: absolute;
+   //     opacity: 0;
+   //
+   //     -o-transition: opacity .2s ease-in-out;
+   //     -ms-transition: opacity .2s ease-in-out;
+   //     -moz-transition: opacity .2s ease-in-out;
+   //     -webkit-transition: opacity .2s ease-in-out;
+   //     transition: opacity .2s ease-in-out;
+//
+// .third:hover #actions{
+   //     opacity: 1
+   //// }
+////
+//
+//    Backgrounds: #F1F3F6
+//    Footer: #F7F9FA
+//    Border: #EAEAEA
+//
+//    Colors:
+//    Success: #7EC74D
+//    Primary: #38495C
+//    Purple: #925FB1
+//    Info: #4F98D5
+//    Warning: #F5B841
+//    Orange: #D9823B
+//    Danger: #D75745
+//    Deep Red: #B24334
+      .border-primary
+      border-left: 4px solid $primary
+                    .border-warning
+                    border-left: 4px solid $warning
+                                  .border-info
+                                  border-left: 4px solid $info
+                                                .border-success
+                                                border-left: 4px solid $success
+                                                              .border-danger
+                                                              border-left: 4px solid $danger
+                                                                            .border-purple
+                                                                            border-left: 4px solid $purple
+                                                                                          .is-inlined
+                                                                                          display: inline-block
+                                                                                          .menu
+                                                                                          position: fixed
+                                                                                          height: 100VH
+                                                                                                     width: 300px
+                                                                                                               padding: 20px
+                                                                                                                          overflow-y: scroll
+                                                                                                                          background: #1a2229
+                                                                                                                          left: 0px
+                                                                                                                                 top: 52px
+                                                                                                                                        bottom: 0px
+                                                                                                                                                 border-right: 1px solid $border
+
+                                                                                                                                                                div .select
+                                                                                                                                                                width: 100%
+.hero-bg
+color: white
+background: #16222a
+background: -webkit-linear-gradient(-13deg, #16222a, #3a6073)
+background: linear-gradient(-13deg, #16222a, #3a6073)
+
+.header
+color: white
+line-height: 1.2
+text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3)
+.logo
+padding: 8px 9px 4px 9px !important
+
+.top-tabs
+background-color: rgba(0, 0, 0, 0.2)
+background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.2))
+border-radius: 5px 5px 0 0
+box-shadow: inset 0 -3px 3px rgba(0, 0, 0, 0.1), 0 -1px 0 rgba(255, 255, 255, 0.1)
+height: 44px
+
+          body
+//background-color: #6ecd56
+//background-color: #f1f4fd
+  background-color: $background
+                     overflow: scroll
+                     min-height: 100VH
+                                    position: fixed
+                                    top: 52px
+                                           right: 0
+left: 300px
+         bottom: 0
+padding-top: 50px
+//background-image: linear-gradient(142deg, #05001c, #060013 31%, #070017 65%, #040017)
+
+.column-actions
+display: none
+margin-top: 20px
+              margin-bottom: 20px
+
+// .box.theme-dark
+//   background-color: #273032
+//   border-radius: 5px
+//   border: 1px solid hsla(190, 13%, 45%, 1)
+//   -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1)
+//   box-shadow: -28 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1)
+//
+.no-pad-top-bottom
+padding-top: 0px
+              padding-bottom: 0px
+
+                               .box.theme-light
+                               background-color: white
+                               border-radius: 5px
+                                               -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1)
+box-shadow: -28 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1)
+//
+.columns.theme-light:hover
+background: linear-gradient(white, #f5f7f9) !important
+box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07) !important
+border-radius: 5px !important
+border-color: #d3d6db !important
+//
+// .bottom-border
+//   padding-bottom: 12px
+//   border: 1px solid transparent
+//   border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+//   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1)
+//
+.menu-list span:nth-child(2)
+position: relative
+top: -2px
+
+       .menu-list a
+       color: white
+
+       .menu-list span:nth-child(2).badge[data-badge]::after
+       margin-left: 12px
+                      .columns.theme-light
+                      border: 1px solid transparent
+                               border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1)
+
+.columns-last
+border: 1px solid transparent
+         border-bottom: 1px solid rgba(0, 0, 0, 0.0) !important
+box-shadow: none
+margin-bottom: -10px !important
+
+.notify
+background-color: rgba(10, 10, 10, 0.86) !important
+right: 24px !important
+top: 82px !important
+position: fixed !important
+z-index: 90 !important
+
+.overlay
+background-color: rgba(10, 10, 10, 0.86)
+bottom: 0
+left: 0
+position: fixed
+right: 0
+top: 0
+opacity: 0
+z-index: 10
+
+// Navigation - Drawer
+                *
+                -webkit-box-sizing: border-box
+                -moz-box-sizing: border-box
+                -o-box-sizing: border-box
+                box-sizing: border-box
+/* adds animation for all transitions
+-webkit-transition: .25s ease-in-out
+-moz-transition: .25s ease-in-out
+-o-transition: .25s ease-in-out
+transition: .25s ease-in-out
+margin: 0
+padding: 0
+-webkit-text-size-adjust: none
+
+.navbar-burger
+z-index: 100
+background-color:  rgba(0, 0, 0, 0.5)
+
+.navbar-burger:hover
+background-color:  rgba(0, 0, 0, 0.8)
+
+.drawer
+position: fixed
+top: 0
+left: -300px
+height: 100%
+width: 300px
+background-color: white
+overflow-x: hidden
+overflow-y: scroll
+padding: 20px
+-webkit-overflow-scrolling: touch
+z-index: 100
+
+/* actual page content pane
+
+#app
+margin-left: 0px
+width: 100%
+overflow-x: hidden
+overflow-y: scroll
+-webkit-overflow-scrolling: touch
+
+.ui-timepicker-wrapper
+overflow-y: auto
+max-height: 150px
+width: 6.5em
+background: #fff
+border: 1px solid #ddd
+-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+outline: 0
+z-index: 10001
+margin: 0
+&.ui-timepicker-with-duration
+  width: 13em
+  &.ui-timepicker-step-30, &.ui-timepicker-step-60
+    width: 11em
+
+.ui-timepicker-list
+margin: 0
+padding: 0
+list-style: none
+
+.ui-timepicker-duration
+margin-left: 5px
+color: #888
+
+.ui-timepicker-list
+&:hover .ui-timepicker-duration
+  color: #888
+li
+  padding: 3px 0 3px 5px
+  cursor: pointer
+  white-space: nowrap
+  color: #000
+  list-style: none
+  margin: 0
+&:hover .ui-timepicker-selected
+  background: #fff
+  color: #000
+
+li.ui-timepicker-selected
+background: #1980EC
+color: #fff
+
+.ui-timepicker-list
+li:hover, .ui-timepicker-selected:hover
+  background: #1980EC
+  color: #fff
+
+li.ui-timepicker-selected .ui-timepicker-duration
+color: #ccc
+
+.ui-timepicker-list li
+&:hover .ui-timepicker-duration
+  color: #ccc
+&.ui-timepicker-disabled
+  color: #888
+  cursor: default
+  &:hover
+    color: #888
+    cursor: default
+&.ui-timepicker-selected.ui-timepicker-disabled
+  color: #888
+  cursor: default
+&.ui-timepicker-disabled:hover, &.ui-timepicker-selected.ui-timepicker-disabled
+  background: #f2f2f2
+
+select
+padding: 2px 10px
+border: 1px solid #979997
+-webkit-appearance: none
+-moz-appearance: none
+-ms-appearance: none
+-o-appearance: none
+appearance: none
+-webkit-border-radius: 4px
+-moz-border-radius: 4px
+-ms-border-radius: 4px
+-o-border-radius: 4px
+border-radius: 4px
+
+
+.navbar
+position: fixed
+top: 0
+left: 0
+right: 0
+border-bottom: 1px solid $border
+z-index: 1000
+
